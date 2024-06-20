@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Web_Layout</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="MainContainer">
+        <div class="header">
+            <ul class="Actions">
+                <li><a href=""><img src="Logos/MyLogo.png" width="60" height="60" id="Logo" alt=""></a></li>
+                <li><a href="">Home</a></li>
+                <li><a href="">Services</a></li>
+                <li><a href="">Products</a></li>
+                <li><a href="">Contacts</a></li>
+            </ul>
+
+            <button id="signUp" onclick="signUp()">Sign Up</button>
+            <a id="LogOut" onclick="logOut()">Log Out</a>  <div class="ProfilePicture"></div>
+        </div>
+        <div class="downDesc">
+            <div class="left">
+                <div class="sideDesc">
+                    <h1 id="Big">
+                        Hello World!
+                    </h1>
+                    <p id="smallDesc">This is a simple functional log-in and sign-up form. Try it for free ❤❤❤</p>
+                </div>
+                <div id="logos">
+                    <p>Social Medias:</p>
+                    <button class="soc-butts"><img src="Logos/youtube.jpg" width="35" height="35"></button>
+                    <button class="soc-butts"><img src="Logos/fb.jpg" width="35" height="35"></button>
+                    <button class="soc-butts"><img src="Logos/twitter.png" width="35" height="35"></button>
+                    <button class="soc-butts"><img src="Logos/insta.jpg" width="35" height="35"></button>
+                </div>
+            </div>
+            <div class="right">
+                <div class="Login">
+                    <p id="usernameP">Username: </p>
+                    <input id="userNameTag" type="text">
+                    <span id="infoUser" class="info"></span>
+                    <p id="passwordP" style="margin-top: 30px;">Password:</p>
+                    <input id="passWordTag" type="password"> <br>
+                    <span id="infoPass" class="info"></span>
+                    <input type="checkbox" checked onclick="passCheck()" id="pass"> <label style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-weight: 300;" for="pass">Hide Password</label>
+                    <button id="LoginButt" onclick="pressedLogin()">Login</button>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="SignUpBox hideSignbox">
+            
+            <button id="exit" onclick="exit()">X</button>
+            <p>Enter Username: (length >= 8 letters)</p>
+            <input type="text" class="signInputs" id="NewUser">
+            <span class="alert" id="NoInputs"></span>
+            <p>Enter Password: (length >= 8 letters)</p>
+            <input type="text" class="signInputs" id="createPass">
+            <span class="alert" id="NoInputs2"></span>
+            <p>Verify Password:</p>
+            <input type="text" class="signInputs" id="verifyPass">
+            <span class="alert" id="NoInputs3"></span>
+            <button id="createAcc" onclick="createAcc()">Sign Up</button>
+        </div>
+        <div class="account-making" style="display: none;">
+            <label for="placeholder" id="ImageHolder"><div id="display-profile"></div></label>
+            <input type="file" style="display: none;" id="placeholder"> 
+            <label for="placeholder" id="ChangeProf">Choose Profile Picture</label> 
+            <button id="Proceed" onclick="proceed()">Proceed</button>
+        </div>
+    </div>
+    <script src="index.js"></script>
+    <script src="LogIn.js"></script>
+</body>
+</html>
